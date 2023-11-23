@@ -1,0 +1,25 @@
+#SideBarContainer {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+
+}
+
+#SideBarContainer button {
+    border-width: 0px;
+    background-color: #9b287b;
+    width: 25%;
+    color: #e2fcef;
+}
+
+#SideBarContainer button:hover {
+    border-width: 0px;
+    background-color: #5c164e;
+    transition: 400ms ease-in-out;
+}
+
+#SideBarContainer #Active {
+    background-color: #5c164e;
+}

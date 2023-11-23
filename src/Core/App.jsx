@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import PageManager from './Components/PageManager';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import PageManager from './Components/PageManager/PageManager';
+import NavBar from './Components/NavBar/NavBar';
+import Footer from './Components/Footer/Footer';
 
 // Alle website sub-pages
 // 1.Home
@@ -14,19 +14,14 @@ import Footer from './Components/Footer';
 function App() {
   
   const [ProgramState, SetProgramState] = useState("Home");
-  const [PreviousProgramState, SetPreviousProgramState] = useState("Home");
 
   function SwitchPage(To) {
-    if (To != ProgramState && ["Home", "About", "Writing", "Social"].includes(ProgramState)) {
-      SetPreviousProgramState(ProgramState);
-    }
     SetProgramState(To);
   }
 
-
   return(
     <>
-      <Header SwitchPage={(To) => {SwitchPage(To);}} PreviousProgramState={PreviousProgramState}></Header>
+      <NavBar SwitchPage={(To) => {SwitchPage(To);}} ProgramState={ProgramState}></NavBar>
       <PageManager ProgramState={ProgramState}></PageManager>
       <Footer/>
     </>

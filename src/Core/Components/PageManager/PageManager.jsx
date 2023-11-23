@@ -1,4 +1,4 @@
-import ErrorPage from '../Pages/Error-Page/ErrorPage';
+import ErrorPage from '../../Pages/Error-Page/ErrorPage';
 
 function PageManager(props) {
     return(
